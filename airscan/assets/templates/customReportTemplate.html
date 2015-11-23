@@ -1,0 +1,25 @@
+<div class="wrapper-sm panel-success panel quest-panel" id="chartHolder">
+    <!-- <input type="text" class="datepicker cal"> -->
+    <div>
+        <p>Select the dates to generate reports:</p>
+        <p>(Note: Min is 04-NOV and MAX being 18 NOV)</p>
+        From Date: <input data-provide="datepicker-inline" value="04/11/2015" id="fromDate" class="datepicker" data-date-format="dd/mm/yyyy"/>
+        To Date: <input data-provide="datepicker-inline" value="18/11/2015" id="toDate" class="datepicker" data-date-format="dd/mm/yyyy"/>
+        <button id="showReports" type="button" class="btn btn-primary">Show Reports</button>
+    </div>
+
+    <% var i = 0; %>
+    <% _.map(reports, function(report,key){ %>
+    <div class="chartwell well well-sm m-t" id="chartwell_<%= report.index %>">
+        <%= report.text %>
+
+        <!-- <div class="scroll-sides"> -->
+            <canvas width="0px" height="0px" class="quest-stat myCharts inline m-l" id="canvas_<%= report.index %>" ></canvas>
+            <div class="ans-colors-grp inline">
+
+            </div>
+        <!-- </div> -->
+    </div>
+    <% i++; %>
+    <% }); %>
+</div>

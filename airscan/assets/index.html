@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+
+    <meta charset="utf-8"/>
+    <title> Air Sensor Reports </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="/styles/app.v2.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/font.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/style.css" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css.map" rel="stylesheet"/>
+    <link href="/styles/sb-admin-2.css" rel="stylesheet"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.21/require.min.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"/>
+    <script type="text/javascript" src="/js/chartnew.min.js"/>
+    <script type="text/javascript" src="/js/datepicker/bootstrap-datepicker"/>
+
+    <script type="text/javascript" src="../jst.js"></script>
+    <script type="text/javascript" src="/jst.js"></script>
+    <script type="text/javascript" src="/js/GlobalFunction.js"></script>
+    <script data-main="/js/app.js" src="/js/require.js"></script>
+
+<script>
+    function htmlEncode(value){
+        return $('<div/>').text(value).html();
+    }
+
+    function htmlDecode(value){
+        return $('<div/>').html(value).text();
+    }
+</script>
+
+</head>
+
+<body>
+<section class="vbox wrapper-cont">
+    <header id="header-nav" class="bg-dark dk header navbar navbar-fixed-top-xs panel-footer ">
+        <div class="navbar-header aside-md">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav">
+        <i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand" data-toggle="fullscreen">Air Sensor Reports</a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a></div>
+    </header>
+    <section>
+        <section class="hbox stretch"> <!-- .aside -->
+            <aside class="bg-light aside-md hidden-print" id="nav">
+                <section class="vbox">
+                    <section class="w-f scrollable">
+                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0"
+                             data-size="5px" data-color="#333333"> <!-- nav -->
+                            <nav class="nav-primary hidden-xs">
+                                <ul class="nav">
+                                    <li><a href="#customReport"> <i
+                                            class="fa fa-book icon"> <b class="bg-success"></b> </i>
+                                        <span></span> Custom Reports </a>
+                                    </li>
+                                    <li><a href="#liveReport"> <i
+                                            class="fa fa-book icon"> <b class="bg-success"></b> </i>
+                                        <span>Live Reports</span> </a></li>
+                                </ul>
+                            </nav>
+                            <!-- / nav -->
+                            </div>
+                    </section>
+                    <footer class="footer lt hidden-xs b-t b-dark">
+
+                    </footer>
+                </section>
+            </aside>
+            <!-- /.aside -->
+            <section class="content">
+                <section class="vbox">
+                    <section id="templatePlaceHolder" class="scrollable main-cont">
+
+                    </section>
+                </section>
+            </section>
+
+        </section>
+    </section>
+</section>
+
+</body>
+</html>

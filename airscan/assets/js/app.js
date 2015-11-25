@@ -1,6 +1,6 @@
 require.config({
     baseUrl: 'js',
-    waitSeconds : 1,
+    waitSeconds : 10,
     paths: {
         templates: '../templates',
         views: '../views',
